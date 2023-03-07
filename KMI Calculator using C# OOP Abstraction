@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class kmi2 : MonoBehaviour
+{
+    public abstract class Indksas //abstrakti klase 
+    {
+        public abstract double Kmi();
+    }
+
+
+    //formules klase
+    public class ManoKMI : Indksas
+    {
+        private double ugis;
+        private double mase;
+
+        public ManoKMI(double u, double m)
+        {
+            ugis = u;
+            mase = m;
+        }
+
+        public override double Kmi()
+        {
+            return mase / ugis;
+        }
+    }
+
+    public class DraugoKMI : Indksas
+    {
+        private double ugis;
+        private double mase;
+    public DraugoKMI(double u, double m)
+        {
+            ugis = u;
+            mase = m;
+        }
+        public override double Kmi()
+        {
+            return mase / ugis;
+        }
+    }
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //spausdinimas
+        Indksas As = new ManoKMI(180, 90);
+        Indksas Draugas = new DraugoKMI(180, 220);
+        Debug.LogFormat("Mano KMI " + As.Kmi());
+        Debug.LogFormat ("draugo KMI " + Draugas.Kmi());
+    }
+
+}

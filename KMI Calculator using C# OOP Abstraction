@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class kmi2 : MonoBehaviour
 {
-    public abstract class Indeksas //abstrakti klase 
+    public abstract class Indksas //abstrakti klase 
     {
         public abstract double Kmi();
     }

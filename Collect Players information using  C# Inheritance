@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Inheritance2 : MonoBehaviour
+{
+
+    //pagrindine klase
+    public class Zaidejas
+    {
+        //nustatomi zaidejo parametrai
+        public string Vardas { get; set; }
+        public int Amzius { get; set; }
+
+        public Zaidejas (string vardas, int amzius)
+        {
+            Vardas = vardas;
+            Amzius = amzius;
+        }
+
+    }
+
+    //isvestine klase
+
+        public class Terminatorius : Zaidejas
+    {
+        public string Arnoldas { get; set; }
+        //isvestines klases parametrai
+        public Terminatorius(string vardas, int amzius, string arnoldas) : base(vardas, amzius)
+        {
+            Arnoldas = arnoldas;
+        }
+    }
+    
+         
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //info patekimas
+        Zaidejas zaidejas = new Zaidejas("Pagrindinis zaidejas", 30);
+        Terminatorius terminatorius = new Terminatorius("Samas", 31, "Robotas");
+
+
+            Debug.Log(zaidejas.Vardas + "yra" + zaidejas.GetType().Name);
+        Debug.Log(terminatorius.Vardas + "yra" + terminatorius.GetType().Name + ".." + terminatorius.Arnoldas);
+    }

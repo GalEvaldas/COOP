@@ -1,0 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class User : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+    public string FullName
+    {
+        get
+        {
+            return FirstName + " " + LastName;
+        }
+
+
+
+    }
+
+    public string FirstName { get; set; }
+    public object LastName { get; set; }
+
+
+
+    public static void PrintUser(User user)
+    {
+        Debug.Log("static method, print user"+ user.Output(1));
+        user.Output(1);
+    }
+
+
+
+
+
+
+    public string Output(int times)
+    {
+        string message = "";
+        for (int i = 0; i <times; i++)
+        {
+            message += (FirstName + LastName);
+
+
+        }
+        return message;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Method2 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        Method2 myProgram = new Method2();
+        myProgram.doSomthing();
+
+
+    }
+    public void doSomthing()
+    {
+
+        User user = new User();
+        user.FirstName = "OMAS";
+            user.LastName = "ABAS";
+        User.PrintUser(user);
+
+
+    }
+}

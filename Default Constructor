@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DefaultConstructor : MonoBehaviour
+{
+    public string myString;
+    //deault constructor
+    public DefaultConstructor()
+    {
+        myString = "Default";
+    }
+
+    //spausdinimo funkcija
+    public void PrintValues()
+    {
+        Debug.Log("myString: " + myString);
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DefaultConstructorMain : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        //inicijavimas DefaultConstructor
+        DefaultConstructor myObject = new DefaultConstructor();
+
+        //print the values of myObject
+        myObject.PrintValues();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

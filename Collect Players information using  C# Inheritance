@@ -20,7 +20,7 @@ public class Inheritance2 : MonoBehaviour
 
     }
 
-    //isvestine klase
+    // isvestine klase
 
         public class Terminatorius : Zaidejas
     {

@@ -1,0 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Method2 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        Method2 myProgram = new Method2();
+        myProgram.doSomthing();
+
+
+    }
+    public void doSomthing()
+    {
+        User me = new User();
+      //  me.FirstName = "Caleb";
+        me.LastName = "Curry";
+        me.Output();
+        Debug.Log(me.FirstName + " " + me.LastName);
+        Debug.Log(me.FirstName);
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class User : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+    string _firstName = "Evaldas";
+    public string FirstName
+    {
+        get
+        {
+            return _firstName.ToLower();
+        }
+
+    }
+    public object LastName { get; set; }
+
+    public void Output()
+    {
+        Debug.Log(FirstName + LastName);
+
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}

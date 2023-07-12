@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inheritance2 : MonoBehaviour
 {
 
-    //pagrindine klase
+    //  pagrindine klase
     public class Zaidejas
     {
         //nustatomi zaidejo parametrai
